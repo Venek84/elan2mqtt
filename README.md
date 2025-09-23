@@ -1,5 +1,7 @@
 # Anouncement
-This project is looking for a new home/mantainer. If you are interested please send a PM.
+There is a new version of this project - please visit https://github.com/pan64/elan2mqtt
+
+(This project is looking for a new home/mantainer. If you are interested please send a PM.)
 
 In meantime you can try to use https://github.com/lordrak007/haas-addon-repo
 
