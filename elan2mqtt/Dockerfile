@@ -1,4 +1,5 @@
-ARG BUILD_FROM
+ARG BUILD_FROM=homeassistant/amd64-base-python:latest
+ENV ARCHIVE elan2mqtt-1.16.0
 FROM $BUILD_FROM
 
 # Add env
@@ -24,7 +25,7 @@ COPY requirements.txt /$ARCHIVE/requirements.txt
 WORKDIR /$ARCHIVE
 
 # install python packages
-RUN pip install -r /$ARCHIVE/requirements.txt
+RUN pip install --no-cache-dir -r /${ARCHIVE}/requirements.txt
 
 RUN ["chmod", "a+x", "./run.sh"]
 
