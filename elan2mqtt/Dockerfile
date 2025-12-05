@@ -1,6 +1,7 @@
 ARG BUILD_FROM=homeassistant/amd64-base-python:latest
-ENV ARCHIVE elan2mqtt-1.16.0
 FROM $BUILD_FROM
+
+ENV ARCHIVE elan2mqtt-1.16.0
 
 # Add env
 ENV LANG C.UTF-8
