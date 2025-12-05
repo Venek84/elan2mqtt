@@ -108,7 +108,10 @@ async def main():
     
     # setup mqtt
     mqtt.Client.connected_flag = False
-    mqtt_cli = mqtt.Client("eLan2MQTT_socket_listener" + args.mqtt_id)
+    mqtt_cli = mqtt.Client(
+        client_id="eLan2MQTT_socket_listener" + args.mqtt_id,
+        callback_api_version=5
+    )
     logger.info("Connecting to MQTT broker")
     logger.info(args.mqtt_broker)
 
