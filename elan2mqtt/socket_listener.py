@@ -20,7 +20,6 @@ import asyncio
 import async_timeout
 
 import paho.mqtt.client as mqtt
-from paho.mqtt.client import CallbackAPIVersion
 
 import json
 
@@ -110,8 +109,7 @@ async def main():
     # setup mqtt
     mqtt.Client.connected_flag = False
     mqtt_cli = mqtt.Client(
-        client_id="eLan2MQTT_socket_listener" + args.mqtt_id,
-        callback_api_version=4
+        client_id="eLan2MQTT_socket_listener" + args.mqtt_id
     )
     logger.info("Connecting to MQTT broker")
     logger.info(args.mqtt_broker)
